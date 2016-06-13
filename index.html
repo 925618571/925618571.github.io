@@ -109,7 +109,61 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/13/菜鸟成神宝典/" data-id="cipdzxlas00007js6avqvuc23" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/13/菜鸟成神宝典/" data-id="cipe0fnto00018ns6byazhv8b" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-hexo搭建方案（一）" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/04/13/hexo搭建方案（一）/" class="article-date">
+  <time datetime="2015-04-13T01:19:55.000Z" itemprop="datePublished">2015-04-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/04/13/hexo搭建方案（一）/">hexo搭建方案（一）</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span>第一步<br>安装nvm（Node Version Manager），Terminal中运行</span></p>
+<p>1<br>$ curl <a href="https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh</a> | sh<br>会提示：</p>
+<p>1<br>=&gt; Close and reopen your terminal to start using NVM<br>退出Terminal重启后nvm命令才能生效。假如update失败，可能没有profile文件，touch一下：</p>
+<p>1<br>2<br>touch ~/.bash_profile<br>touch ~/.profile<br>使用nvm安装node.js：</p>
+<p>1<br>nvm install 0.10<br>下完后安装hexo，这一步时间比较长：</p>
+<p>1<br>npm install -g hexo<br>然后找个文件初始化blog：</p>
+<p>1<br>2<br>3<br>cd ~/git/blog<br>hexo init .<br>ls<br>[update]更新hexo2版本后安装还需要执行：</p>
+<p>1<br>2<br>3<br>$ npm install hexo-renderer-ejs –save<br>$ npm install hexo-renderer-stylus –save<br>$ npm install hexo-renderer-marked –save<br>生成出的目录结构：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── scripts<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes<br>新建一篇文章：</p>
+<p>hexo new mac下使用hexo搭建blog</p>
+<p>open source/_posts/mac下使用hexo搭建blog.md</p>
+<p>编辑md后生成html：</p>
+<p>$ hexo generate<br>本地预览：<br>$ hexo server<br>=&gt; [info] Hexo is running at localhost:4000/. Press Ctrl+C to stop.</p>
+<p>deploy<br>github上建个respository，设置里设一下<br>在_config.yml中：</p>
+<p>1<br>2<br>3<br>deploy:<br>type: github<br>repository: <a href="https://github.com/sunnyxx/blog-hexo.git" target="_blank" rel="external">https://github.com/sunnyxx/blog-hexo.git</a><br>然后执行：<br>$ hexo deploy</p>
+<p>就行了，github会多一个branch，比octopress简单</p>
+<p>参考文献：</p>
+<p>1<br>2<br>3<br>4<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">http://www.jianshu.com/p/a2023a601ceb</a><br><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a><br></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/04/13/hexo搭建方案（一）/" data-id="cipe0fnt000008ns6h70fwg89" class="article-share-link">Share</a>
       
       
     </footer>
@@ -136,7 +190,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
     </div>
   </div>
 
@@ -150,6 +204,10 @@
         
           <li>
             <a href="/2015/11/13/菜鸟成神宝典/">菜鸟成神宝典</a>
+          </li>
+        
+          <li>
+            <a href="/2015/04/13/hexo搭建方案（一）/">hexo搭建方案（一）</a>
           </li>
         
       </ul>
