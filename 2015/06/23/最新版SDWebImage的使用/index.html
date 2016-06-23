@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>最新版SDWebImage的使用 | YD技术博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="我之前写过一篇博客，介绍缓存处理的三种方式，其中最难，最麻烦，最占内存资源的还是图片缓存，最近做的项目有大量的图片处理，还是采用了SDWebImage来处理，但是发现之前封装好的代码报错了。研究发现，是我用了新版的SDWebImage，好多方法都变了。
+现在把代码贴出来，供大家参考。尤其是新手，看完这篇博客，图片缓存so easy。最后有demo供大家下载，先学习。网址http://www.coc">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最新版SDWebImage的使用">
+<meta property="og:url" content="http://yoursite.com/2015/06/23/最新版SDWebImage的使用/index.html">
+<meta property="og:site_name" content="YD技术博客">
+<meta property="og:description" content="我之前写过一篇博客，介绍缓存处理的三种方式，其中最难，最麻烦，最占内存资源的还是图片缓存，最近做的项目有大量的图片处理，还是采用了SDWebImage来处理，但是发现之前封装好的代码报错了。研究发现，是我用了新版的SDWebImage，好多方法都变了。
+现在把代码贴出来，供大家参考。尤其是新手，看完这篇博客，图片缓存so easy。最后有demo供大家下载，先学习。网址http://www.coc">
+<meta property="og:updated_time" content="2016-06-23T02:54:03.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="最新版SDWebImage的使用">
+<meta name="twitter:description" content="我之前写过一篇博客，介绍缓存处理的三种方式，其中最难，最麻烦，最占内存资源的还是图片缓存，最近做的项目有大量的图片处理，还是采用了SDWebImage来处理，但是发现之前封装好的代码报错了。研究发现，是我用了新版的SDWebImage，好多方法都变了。
+现在把代码贴出来，供大家参考。尤其是新手，看完这篇博客，图片缓存so easy。最后有demo供大家下载，先学习。网址http://www.coc">
+  
+    <link rel="alternate" href="/atom.xml" title="YD技术博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YD技术博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">只有努力，才能看起来毫不费力</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-最新版SDWebImage的使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2015/06/23/最新版SDWebImage的使用/" class="article-date">
+  <time datetime="2015-06-23T02:49:41.000Z" itemprop="datePublished">2015-06-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      最新版SDWebImage的使用
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span>我之前写过一篇博客，介绍缓存处理的三种方式，其中最难，最麻烦，最占内存资源的还是图片缓存，最近做的项目有大量的图片处理，还是采用了SDWebImage来处理，但是发现之前封装好的代码报错了。研究发现，是我用了新版的SDWebImage，好多方法都变了。</span></p>
+<p>现在把代码贴出来，供大家参考。尤其是新手，看完这篇博客，图片缓存so easy。最后有demo供大家下载，先学习。网址<a href="http://www.cocoachina.com/ios/20141212/10622.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20141212/10622.html</a></p>
+<p>第一步，下载SDWebImage，导入工程。github托管地址<a href="https://github.com/rs/SDWebImage" target="_blank" rel="external">https://github.com/rs/SDWebImage</a></p>
+<p>第二步，在需要的地方导入头文件</p>
+<p>1</p>
+<p>#import “UIImageView+WebCache.h”<br>第三步，调用sd_setImageWithURL：方法缓存图片，注意，这就是新版本的新方法，旧方法是setImageWithURL:。下面将几个方法都介绍一下。</p>
+<ol>
+<li>sd_setImageWithURL：</li>
+</ol>
+<p>1<br>2<br>//图片缓存的基本代码，就是这么简单<br>[self.image1 sd_setImageWithURL:imagePath1];</p>
+<ol>
+<li>sd_setImageWithURL:  completed:</li>
+</ol>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>//用block 可以在图片加载完成之后做些事情<br>[self.image2 sd_setImageWithURL:imagePath2 completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, NSURL *imageURL) {</p>
+<p>NSLog(@”这里可以在图片加载完成之后做些事情”);</p>
+<p>}];</p>
+<ol>
+<li>sd_setImageWithURL:  placeholderImage:</li>
+</ol>
+<p>1<br>2<br>//给一张默认图片，先使用默认图片，当图片加载完成后再替换<br>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”]];</p>
+<ol>
+<li>sd_setImageWithURL:  placeholderImage:  completed:</li>
+</ol>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>//使用默认图片，而且用block 在完成后做一些事情<br>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”] completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, NSURL *imageURL) {</p>
+<p>NSLog(@”图片加载完成后做的事情”);</p>
+<p>}];</p>
+<ol>
+<li>sd_setImageWithURL:  placeholderImage:  options:</li>
+</ol>
+<p>1<br>2<br>3<br>//options 选择方式</p>
+<p>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”] options:SDWebImageRetryFailed];<br>其他就不一一介绍了，oc是自文档语言，看方法名就知道干什么的了。除了带options选项的方法，其他的方法都是综合存储，也就是内存缓存和磁盘缓存结合的方式，如果你只需要内存缓存，那么在options这里选择SDWebImageCacheMemoryOnly就可以了。</p>
+<p>如果不想深入了解，到这里你已经可以用SDWebimage进行图片缓存了，接下来我要解释options的所有选项，以及SDWebImage内部执行流程。</p>
+<p>一、options所有选项：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>　　//失败后重试<br>SDWebImageRetryFailed = 1 &lt;&lt; 0,</p>
+<p>//UI交互期间开始下载，导致延迟下载比如UIScrollView减速。<br>SDWebImageLowPriority = 1 &lt;&lt; 1,</p>
+<p>//只进行内存缓存<br>SDWebImageCacheMemoryOnly = 1 &lt;&lt; 2,</p>
+<p>//这个标志可以渐进式下载,显示的图像是逐步在下载<br>SDWebImageProgressiveDownload = 1 &lt;&lt; 3,</p>
+<p>//刷新缓存<br>SDWebImageRefreshCached = 1 &lt;&lt; 4,</p>
+<p>//后台下载<br>SDWebImageContinueInBackground = 1 &lt;&lt; 5,</p>
+<p>//NSMutableURLRequest.HTTPShouldHandleCookies = YES;</p>
+<p>SDWebImageHandleCookies = 1 &lt;&lt; 6,</p>
+<p>//允许使用无效的SSL证书<br>//SDWebImageAllowInvalidSSLCertificates = 1 &lt;&lt; 7,</p>
+<p>//优先下载<br>SDWebImageHighPriority = 1 &lt;&lt; 8,</p>
+<p>//延迟占位符<br>SDWebImageDelayPlaceholder = 1 &lt;&lt; 9,</p>
+<p>//改变动画形象<br>SDWebImageTransformAnimatedImage = 1 &lt;&lt; 10,<br>二、SDWebImage内部实现过程</p>
+<p>入口 setImageWithURL:placeholderImage:options: 会先把 placeholderImage 显示，然后 SDWebImageManager 根据 URL 开始处理图片。<br>进入 SDWebImageManager-downloadWithURL:delegate:options:userInfo:，交给 SDImageCache 从缓存查找图片是否已经下载 queryDiskCacheForKey:delegate:userInfo:.<br>先从内存图片缓存查找是否有图片，如果内存中已经有图片缓存，SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo: 到 SDWebImageManager。<br>SDWebImageManagerDelegate 回调 webImageManager:didFinishWithImage: 到 UIImageView+WebCache 等前端展示图片。<br>如果内存缓存中没有，生成 NSInvocationOperation 添加到队列开始从硬盘查找图片是否已经缓存。<br>根据 URLKey 在硬盘缓存目录下尝试读取图片文件。这一步是在 NSOperation 进行的操作，所以回主线程进行结果回调 notifyDelegate:。<br>如果上一操作从硬盘读取到了图片，将图片添加到内存缓存中（如果空闲内存过小，会先清空内存缓存）。SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo:。进而回调展示图片。<br>如果从硬盘缓存目录读取不到图片，说明所有缓存都不存在该图片，需要下载图片，回调 imageCache:didNotFindImageForKey:userInfo:。<br>共享或重新生成一个下载器 SDWebImageDownloader 开始下载图片。<br>图片下载由 NSURLConnection 来做，实现相关 delegate 来判断图片下载中、下载完成和下载失败。<br>connection:didReceiveData: 中利用 ImageIO 做了按图片下载进度加载效果。<br>connectionDidFinishLoading: 数据下载完成后交给 SDWebImageDecoder 做图片解码处理。<br>图片解码处理在一个 NSOperationQueue 完成，不会拖慢主线程 UI。如果有需要对下载的图片进行二次处理，最好也在这里完成，效率会好很多。<br>在主线程 notifyDelegateOnMainThreadWithInfo: 宣告解码完成，imageDecoder:didFinishDecodingImage:userInfo: 回调给 SDWebImageDownloader。<br>imageDownloader:didFinishWithImage: 回调给 SDWebImageManager 告知图片下载完成。<br>通知所有的 downloadDelegates 下载完成，回调给需要的地方展示图片。<br>将图片保存到 SDImageCache 中，内存缓存和硬盘缓存同时保存。写文件到硬盘也在以单独 NSInvocationOperation 完成，避免拖慢主线程。<br>SDImageCache 在初始化的时候会注册一些消息通知，在内存警告或退到后台的时候清理内存图片缓存，应用结束的时候清理过期图片。<br>SDWI 也提供了 UIButton+WebCache 和 MKAnnotationView+WebCache，方便使用。<br>SDWebImagePrefetcher 可以预先下载图片，方便后续使用。<br>从上面流程可以看出，当你调用setImageWithURL:方法的时候，他会自动去给你干这么多事，当你需要在某一具体时刻做事情的时候，你可以覆盖这些方法。比如在下载某个图片的过程中要响应一个事件，就覆盖这个方法：</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>//覆盖方法，指哪打哪，这个方法是下载imagePath2的时候响应<br>SDWebImageManager *manager = [SDWebImageManager sharedManager];</p>
+<p>[manager downloadImageWithURL:imagePath2 options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {</p>
+<p>NSLog(@”显示当前进度”);</p>
+<p>} completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {</p>
+<p>NSLog(@”下载完成”);<br>}];<br>对于初级来说，用sd_setImageWithURL:的若干个方法就可以实现很好的图片缓存。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2015/06/23/最新版SDWebImage的使用/" data-id="ciprptj9i000213s6gk8tzy14" class="article-share-link">Partager</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/11/13/菜鸟成神宝典/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          菜鸟成神宝典
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/06/14/iOS开发之理解iOS中的MVC设计模式/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">iOS开发之理解iOS中的MVC设计模式</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Articles récents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/">跨平台APP----对Cordova,APPCan,DCloud,APICloud四大平台的分析</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/15/搞定JS和iOS的交互/">搞定JS和iOS的交互</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/13/菜鸟成神宝典/">菜鸟成神宝典</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/23/最新版SDWebImage的使用/">最新版SDWebImage的使用</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/14/iOS开发之理解iOS中的MVC设计模式/">iOS开发之理解iOS中的MVC设计模式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
