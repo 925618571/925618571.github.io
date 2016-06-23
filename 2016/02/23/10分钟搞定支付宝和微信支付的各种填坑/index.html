@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>10分钟搞定支付宝和微信支付的各种填坑 | YD技术博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="支付宝填坑是每个接入支付宝必经之路，下面是我接入支付宝遇到的问题汇总，希望大家在接入的路上少一点弯路。  网址  http://www.cocoachina.com/ios/20160527/16480.html
+问题1. Util/base64.h:63:21: Cannot find interface declaration for ‘NSObject’, superclass of ‘Ba">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10分钟搞定支付宝和微信支付的各种填坑">
+<meta property="og:url" content="http://yoursite.com/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/index.html">
+<meta property="og:site_name" content="YD技术博客">
+<meta property="og:description" content="支付宝填坑是每个接入支付宝必经之路，下面是我接入支付宝遇到的问题汇总，希望大家在接入的路上少一点弯路。  网址  http://www.cocoachina.com/ios/20160527/16480.html
+问题1. Util/base64.h:63:21: Cannot find interface declaration for ‘NSObject’, superclass of ‘Ba">
+<meta property="og:updated_time" content="2016-06-23T11:57:05.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="10分钟搞定支付宝和微信支付的各种填坑">
+<meta name="twitter:description" content="支付宝填坑是每个接入支付宝必经之路，下面是我接入支付宝遇到的问题汇总，希望大家在接入的路上少一点弯路。  网址  http://www.cocoachina.com/ios/20160527/16480.html
+问题1. Util/base64.h:63:21: Cannot find interface declaration for ‘NSObject’, superclass of ‘Ba">
+  
+    <link rel="alternate" href="/atom.xml" title="YD技术博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">YD技术博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">只有努力，才能看起来毫不费力</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-10分钟搞定支付宝和微信支付的各种填坑" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/" class="article-date">
+  <time datetime="2016-02-23T11:50:18.000Z" itemprop="datePublished">2016-02-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      10分钟搞定支付宝和微信支付的各种填坑
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><span>支付宝填坑是每个接入支付宝必经之路，下面是我接入支付宝遇到的问题汇总，希望大家在接入的路上少一点弯路。  网址  <a href="http://www.cocoachina.com/ios/20160527/16480.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20160527/16480.html</a></span></p>
+<p>问题1. Util/base64.h:63:21: Cannot find interface declaration for ‘NSObject’, superclass of ‘Base64’</p>
+<p>解决办法：</p>
+<p>这是base64.h中没有加入#import 系统库文件导致，这个错误报错方法直接想喷它一脸。报错方式太恶心。</p>
+<p>问题2.截图告知你什么问题</p>
+<p>616981-d6540c725f3801a4.jpg</p>
+<p>解决办法：</p>
+<p>这个问题可以同上的，心情好，截图再次说明下，在 openssl_wrapper.h中#import 库即可</p>
+<p>问题3.Util/openssl_wrapper.m:11:9: ‘rsa.h’ file not found</p>
+<p>解决办法：</p>
+<p>（1）万年老坑，只要你接入支付宝百分百要遇到的问题，所以习以为常吧</p>
+<p>（2）在Build setting中搜索search，找到Header Search Paths，添加$(PROJECT_DIR)/openssl和$(PROJECT_DIR) 如下图：</p>
+<p>（3）重要问题说三遍，这是网络找到的到答案后继续有同样的坑，自己的解决方案,</p>
+<p>Header Search Paths $(PROJECT_DIR)/ali中输入这个</p>
+<p>Framework Search Paths 和 Library Search Paths 继续是$(inherited) 和 $(PROJECT_DIR)/ali</p>
+<p>‘rsa.h’ file not found的解决方案</p>
+<p>（4）由于后期多项目的接入，让我知道一个算是万能方法吧，就是始终保持Header Search Paths 和 Library Search Paths 都能找到你导入的openssl的正确路径即可，已尝试多遍，是能解决以上问题（求黑）</p>
+<p>616981-b71f879b0c85fb6a.jpg</p>
+<p>616981-e833ce4b6bd3cb57.jpg</p>
+<p>问题4. 这类错很多，大概有这些：这些可能是库文件没有导入，导致的</p>
+<p>“_CNCopyCurrentNetworkInfo”, referenced from:</p>
+<p>Undefined symbols for architecture x86_64:</p>
+<p>“CNCopyCurrentNetworkInfo”, referenced from:</p>
+<p>-[APayReachability wifiInterface] in AlipaySDK</p>
+<p>+[internal_DeviceInfo getSSIDInfo] in AlipaySDK</p>
+<p>+[internal_DeviceInfo getNetworkInfo] in AlipaySDK</p>
+<p>“_CNCopySupportedInterfaces”, referenced from:</p>
+<p>-[APayReachability wifiInterface] in AlipaySDK</p>
+<p>+[internal_DeviceInfo getSSIDInfo] in AlipaySDK</p>
+<p>+[internal_DeviceInfo getNetworkInfo] in AlipaySDK</p>
+<p>“_CTRadioAccessTechnologyCDMA1x”, referenced from:</p>
+<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
+<p>“_CTRadioAccessTechnologyEdge”, referenced from:</p>
+<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
+<p>“_CTRadioAccessTechnologyGPRS”, referenced from:</p>
+<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
+<p>“_CTRadioAccessTechnologyLTE”, referenced from:</p>
+<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
+<p>“_OBJC_CLASS$_CMMotionManager”, referenced from:</p>
+<p>objc-class-ref in AlipaySDK</p>
+<p>“OBJC_CLASS$_CTTelephonyNetworkInfo”, referenced from:</p>
+<p>objc-class-ref in AlipaySDK</p>
+<p>“SCNetworkReachabilityCreateWithAddress”, referenced from:</p>
+<p>+[APayReachability reachabilityWithAddress:] in AlipaySDK</p>
+<p>+[AliSecXReachability reachabilityWithAddress:] in AlipaySDK</p>
+<p>“_SCNetworkReachabilityCreateWithName”, referenced from:</p>
+<p>+[APayReachability reachabilityWithHostname:] in AlipaySDK</p>
+<p>+[AliSecXReachability reachabilityWithHostName:] in AlipaySDK</p>
+<p>“_SCNetworkReachabilityGetFlags”, referenced from:</p>
+<p>-[APayReachability isReachable] in AlipaySDK</p>
+<p>-[APayReachability isReachableViaWWAN] in AlipaySDK</p>
+<p>-[APayReachability isReachableViaWiFi] in AlipaySDK</p>
+<p>-[APayReachability connectionRequired] in AlipaySDK</p>
+<p>-[APayReachability isConnectionOnDemand] in AlipaySDK</p>
+<p>-[APayReachability isInterventionRequired] in AlipaySDK</p>
+<p>-[APayReachability reachabilityFlags] in AlipaySDK</p>
+<p>…</p>
+<p>“_SCNetworkReachabilityScheduleWithRunLoop”, referenced from:</p>
+<p>-[AliSecXReachability startNotifier] in AlipaySDK</p>
+<p>“_SCNetworkReachabilitySetCallback”, referenced from:</p>
+<p>-[APayReachability startNotifier] in AlipaySDK</p>
+<p>-[APayReachability stopNotifier] in AlipaySDK</p>
+<p>-[AliSecXReachability startNotifier] in AlipaySDK</p>
+<p>“_SCNetworkReachabilitySetDispatchQueue”, referenced from:</p>
+<p>-[APayReachability startNotifier] in AlipaySDK</p>
+<p>-[APayReachability stopNotifier] in AlipaySDK</p>
+<p>“_SCNetworkReachabilityUnscheduleFromRunLoop”, referenced from:</p>
+<p>-[AliSecXReachability stopNotifier] in AlipaySDK</p>
+<p>“std::1::basic_string, std::1::allocator &gt;::init(char const, unsigned long)”, referenced from:</p>
+<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
+<p>“std::1::basic_string, std::1::allocator &gt;::reserve(unsigned long)”, referenced from:</p>
+<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
+<p>“std::1::basic_string, std::__1::allocator &gt;::~basic_string()”, referenced from:</p>
+<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
+<p>“std::nothrow”, referenced from:</p>
+<p>CAliSecXBuffer::CAliSecXBuffer(unsigned long) in AlipaySDK</p>
+<p>CAliSecXBuffer::_copy(unsigned char const, unsigned long) in AlipaySDK</p>
+<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
+<p>“std::terminate()”, referenced from:</p>
+<p>clang_call_terminate in AlipaySDK</p>
+<p>“operator delete”, referenced from:</p>
+<p>CAliSecXBuffer::~CAliSecXBuffer() in AlipaySDK</p>
+<p>CAliSecXBuffer::release() in AlipaySDK</p>
+<p>CAliSecXBuffer::~CAliSecXBuffer() in AlipaySDK</p>
+<p>CAliSecXBuffer::operator=(CAliSecXBuffer const&amp;) in AlipaySDK</p>
+<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
+<p>alisec_crypto_Hex2Bin(CAliSecXBuffer const&amp;) in AlipaySDK</p>
+<p>alisec_crypto_Bin2Hex(CAliSecXBuffer const&amp;) in AlipaySDK</p>
+<p>…</p>
+<p>“operator new”, referenced from:</p>
+<p>CAliSecXBuffer::CAliSecXBuffer(unsigned long) in AlipaySDK</p>
+<p>CAliSecXBuffer::_copy(unsigned char const*, unsigned long) in AlipaySDK</p>
+<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
+<p>“cxa_begin_catch”, referenced from:</p>
+<p>clang_call_terminate in AlipaySDK</p>
+<p>“gxx_personality_v0”, referenced from:</p>
+<p>+[ASSStorageAccesser saveStorageModel:] in AlipaySDK</p>
+<p>+[ASSStorageAccesser loadStorageModelFromKeychain] in AlipaySDK</p>
+<p>+[ASSStorageAccesser loadPreviousApdid] in AlipaySDK</p>
+<p>+[ASSStorageAccesser getRandomizedID] in AlipaySDK</p>
+<p>+[ASSStorageAccesser getNewRadomizedID] in AlipaySDK</p>
+<p>+[ASSStorageAccesser loadLastLoginTime] in AlipaySDK</p>
+<p>+[ASSStorageAccesser saveCurrentLoginTime:] in AlipaySDK</p>
+<p>…</p>
+<p>“_deflate”, referenced from:</p>
+<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
+<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
+<p>“_deflateEnd”, referenced from:</p>
+<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
+<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
+<p>“_deflateInit2”, referenced from:</p>
+<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
+<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
+<p>“_kCNNetworkInfoKeyBSSID”, referenced from:</p>
+<p>+[UIDevice(APEX) networkDic] in AlipaySDK</p>
+<p>“_kCNNetworkInfoKeySSID”, referenced from:</p>
+<p>+[UIDevice(APEX) networkDic] in AlipaySDK</p>
+<p>ld: symbol(s) not found for architecture x86_64</p>
+<p>clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
+<p>解决办法：</p>
+<p>这种问题通过在General-&gt;Link Framework and Libraiies中添加以下framework解决：</p>
+<ul>
+<li><p>libz.tbd</p>
+</li>
+<li><p>libc++.tbd</p>
+</li>
+<li><p>Security.framework</p>
+</li>
+<li><p>CoreMotion.Framework</p>
+</li>
+<li><p>CFNetwork.framework</p>
+</li>
+<li><p>CoreTelephony.framework</p>
+</li>
+<li><p>SystemConfiguration.framework</p>
+</li>
+</ul>
+<p>截图如下，由于公司同时接入支付宝和微信支付，所以导入的库就多了点咯：</p>
+<p>616981-2e9fde123b91a6d5.jpg</p>
+<p>问题5. Redefinition of ‘RSA’ as different kind of symbol 多为sdk集成时产生的坑，因为我们公司在集成支付宝之前，有用过RSA加密，导致重名问题</p>
+<p>解决办法：</p>
+<p>（1）这个问题不是每个公司都可能遇到的，但遇到也心烦</p>
+<p>（2）由于支付宝中的openssl中的rsa.h文件与RSA加密有重名冲突。改掉公司自己之前导入RSA的命名，如果你牛逼也可以去改rsa.h中的</p>
+<p>问题6. 系统库导入问题</p>
+<p>+++++++++++++</p>
+<p>symbol(s) not found for architecture arm64</p>
+<p>1464167743266924.png</p>
+<p>解决办法：</p>
+<p>就是导入系统库了</p>
+<p>616981-3a750ed6a81bdc43.jpg</p>
+<p>问题7：终于到微信了，接入微信，你就开心了</p>
+<p>因为问题太少了，只能感谢下这两个帖子的楼主了</p>
+<p>解决办法：</p>
+<p>使用微信支付SDK1.5版本的支付demo</p>
+<p>微信支付如果遇到跳转只有一个确定请看这里</p>
+<p>为了一些懒人懒的去看帖子，简单说，就是微信支付注册放在友盟分享之后就ok了！</p>
+<p>代码示例：</p>
+<p>1<br>2<br>3<br>4<br>// 友盟分享<br>[self configUmengShare];<br>//向微信注册<br>[WXApi registerApp:@”wxb4ba3c02aa476ea1” withDescription:@”demo 2.0”];<br>问题7：拉起支付宝报错：交易订单处理失败,请稍后再试(ALI64)</p>
+<p>解决办法：</p>
+<p>重新生成私钥和公钥，执行步骤如下个问题</p>
+<p>问题8：支付宝要重新生成私钥和公钥，并上传修改公钥 – 为你补充</p>
+<p>解决办法：</p>
+<p>RSA密钥生成命令步骤如下：</p>
+<p>(1)先在终端键入 openssl</p>
+<p>生成RSA私钥</p>
+<p>(2)openssl&gt;genrsa -out rsa_private_key.pem 1024</p>
+<p>生成RSA公钥</p>
+<p>(3)openssl&gt;rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem</p>
+<p>将RSA私钥转换成PKCS8格式</p>
+<p>(4)openssl&gt;pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt</p>
+<p>注意：“&gt;”符号后面的才是需要输入的命令。</p>
+<p>使用</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>WuTiandeiMac:FPHClientNew wutianshi$ openssl<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt; genrsa -out rsa_private_key.pem 1024<br>Generating RSA private key, 1024 bit long modulus<br>………………..++++++<br>………++++++<br>e is 65537 (0x10001)<br>OpenSSL&gt; rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem<br>writing RSA key<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt; pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt<br>—–BEGIN PRIVATE KEY—–<br>MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBANOjnFDIjeQjyah1<br>1smthHNsiHyXE8EOWMyMZkLrIlbu6TCDVHk/hhJTpbDxVOz6f4cFdynP/wD9Tbnf<br>ZfJCKFDFJ9jPz3Euyb5/jLFbyAVblyLLPiv5bxRLaA9/w4Jtt+G7E/ti8HN6224x<br>4TT3owFuKqZTcAXeqXp7QMzZyEkZAgMBAAECgYBWYKRf5DrlLiYT92Rek89HPLjI<br>APEzDiP3+CWUkltFl+Tcw/0qL18NA87QVO8QeXyrIvPrwNSXFssuXZtCMPY6oqgh<br>21ixQ+w4Kk4Z8nkEbFNRjryrpOeGMQmZlkSqRiehnYPY6UT8ovKXj0D1HBoscfA7<br>z1Ioxpo3QEN3jsxkcQJBAPbgYhJYS7+/HB92eXaHckTpU0/ycosSj6ha02xs5+Sv<br>xJbkkDfrt/LVVgApBYlgJQG0WRcD/8+4cIyyAxGFp7MCQQDbdduyrvUTffsXeuad<br>XcHIAmX928y19YGvCU3+TJtGIfUMPoRsnidMnZh2s29G6bGy0fkrmMadogEkKqQX<br>AmYDAkBEmbdGx7hM0Oscpww7bonHMlrPNVy03nSC4LItR9nsRxdGor6ce2jDFpru<br>MnfyY4AFCDtVVOwpqWPFBNYrcUtXAkEAltAme2OKHawMmnUl9+zPV1B2oH6k7kJZ<br>rVy6kVA5wHdje9eWj0IcBaWjeacTiGreZ+Gt1sz1aKxFFoKLIxjN2wJADlpg/9iN<br>Bf+JylK9QEgOTw6PngSOiXeaVXdErOPbu4WkzvxhB0bm8HPEPiJpLg/3sNaaX3ou<br>TIEHO8o1EcEnrw==<br>—–END PRIVATE KEY—–<br>OpenSSL&gt;<br>生成的文件：</p>
+<p>616981-bf1bd390c88ef9da.png</p>
+<p>把公钥上传到支付宝，然后把pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt 这条命令产生的私钥用在下面设置中就好</p>
+<p>然后设置</p>
+<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>/<em>
+</em>商户的唯一的parnter和seller。<br><em>签约后，支付宝会为每个商户分配一个唯一的 parnter 和 seller。
+</em>/<br>/<em>============================================================================</em>/<br>/<em>=======================需要填写商户app申请的===================================</em>/<br>/<em>============================================================================</em>/<br>NSString <em>partner = PartnerID;//合作伙伴身份（PID）:<br>NSString </em>seller = SellerID;//商户支付宝账户<br>//获取私钥并将商户信息签名,外部商户可以根据情况存放私钥和签名,只需要遵循RSA签名规范,并将签名字符串base64编码和UrlEncode<br>NSString *privateKey = PartnerPrivKey;// 刚第三端命令生成的去头去尾<br>如有问题，继续分享咯，总结才能让问题越来越少！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/" data-id="cips97vcm0000nos61zmkpyvi" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          跨平台APP----对Cordova,APPCan,DCloud,APICloud四大平台的分析
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2015/11/15/搞定JS和iOS的交互/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">搞定JS和iOS的交互</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">May 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/04/">April 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/">跨平台APP----对Cordova,APPCan,DCloud,APICloud四大平台的分析</a>
+          </li>
+        
+          <li>
+            <a href="/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/">10分钟搞定支付宝和微信支付的各种填坑</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/15/搞定JS和iOS的交互/">搞定JS和iOS的交互</a>
+          </li>
+        
+          <li>
+            <a href="/2015/11/13/菜鸟成神宝典/">菜鸟成神宝典</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/23/最新版SDWebImage的使用/">最新版SDWebImage的使用</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
