@@ -3,17 +3,30 @@
 <head>
   <meta charset="utf-8">
   
-  <title>YD技术博客</title>
+  <title>iOS中文版三方库资源库 | YD技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="坚持">
-<meta property="og:type" content="website">
-<meta property="og:title" content="YD技术博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Road Map iOS - 开发 iOS 应用从今天开始，苹果指南。★
+Lifehacker - 我想写一个 iOS 应用，该从哪里开始？
+Codeproject - 入门 iPhone 和 iOS 应用开发。
+Ray Wenderlich - 学习 iOS 应用开发。
+Stanford - Developing Apps to iOS - 斯坦福在 iTunes U 上的 iOS App 开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS中文版三方库资源库">
+<meta property="og:url" content="http://yoursite.com/2016/02/21/iOS中文版三方库资源库/index.html">
 <meta property="og:site_name" content="YD技术博客">
-<meta property="og:description" content="坚持">
+<meta property="og:description" content="Road Map iOS - 开发 iOS 应用从今天开始，苹果指南。★
+Lifehacker - 我想写一个 iOS 应用，该从哪里开始？
+Codeproject - 入门 iPhone 和 iOS 应用开发。
+Ray Wenderlich - 学习 iOS 应用开发。
+Stanford - Developing Apps to iOS - 斯坦福在 iTunes U 上的 iOS App 开发">
+<meta property="og:updated_time" content="2016-07-21T06:36:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="YD技术博客">
-<meta name="twitter:description" content="坚持">
+<meta name="twitter:title" content="iOS中文版三方库资源库">
+<meta name="twitter:description" content="Road Map iOS - 开发 iOS 应用从今天开始，苹果指南。★
+Lifehacker - 我想写一个 iOS 应用，该从哪里开始？
+Codeproject - 入门 iPhone 和 iOS 应用开发。
+Ray Wenderlich - 学习 iOS 应用开发。
+Stanford - Developing Apps to iOS - 斯坦福在 iTunes U 上的 iOS App 开发">
   
     <link rel="alternate" href="/atom.xml" title="YD技术博客" type="application/atom+xml">
   
@@ -66,273 +79,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/" class="article-date">
-  <time datetime="2016-05-14T00:46:56.000Z" itemprop="datePublished">2016-05-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/">跨平台APP----对Cordova,APPCan,DCloud,APICloud四大平台的分析</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>原文转自：<a href="http://blog.csdn.net/tangzenglei/article/details/50668914" target="_blank" rel="external">http://blog.csdn.net/tangzenglei/article/details/50668914</a></span></p>
-<p>前言：<br>移动开发是未来一个很重要的IT领域，而跨平台开发将是这一领域最重要的事情。 —-谷震平</p>
-<p>兵器谱</p>
-<p>在国外，最大的是Cordova（PhoneGap，2011年广泛流行），在2012年12月开源。<br>在国内，按时间顺序，有：</p>
-<p>2012年，AppCan<br>2013年，DCloud<br>2014年9月，APICloud<br>二 Cordova</p>
-<p>Cordova是Apache软件基金会的一个产品。其前身是PhoneGap，由Nitobi开发，2011年10月，Adobe收够了Nitobi，并且PhoneGap项目也被贡献给Apache软件基金会。Apache在2012年12月，发布了Cordova，截止到2015年12月，最新版面是3.0。<br>该框架的目标用户群体是原生开发者，其设计初衷是希望用户群体能够通过跨平台开发的方法降低原生开发的成本。为此，开发人员需要安装原生开发环境，配置工程，使用HTML5、CSS3、JS和原生SDK生成应用。<br>Cordova的优势很明显，可以使用的框架、原生接口、支持平台都很多。但是，外国人写的东西，公司使用后，出现的技术问题难以解决。同时，其在使用jQuery Mobile、Sencha Touch等前端框架的时候，有特效启动慢、页面切换慢、数据请求慢的特点。</p>
-<p>三 APPCan</p>
-<p>AppCan成立于2010年，2011年推出产品并测试，2012年正式推出品牌，2013年商业模式成型，2014年开发者注册约70w。AppCan不是开源平台，同时，企业版和部分插件是收费的。换句话说，AppCan只是一个卖软件的商业公司。我们认为：这会对其市场的占有率有着直接影响，闭源而没有垄断，所以前景不会太好。</p>
-<p>四 DCloud</p>
-<p>DCloud大部分产品开源，W3C会员单位，HTML5中国产业联盟的发起公司之一，在HTML5这个行业有一定的江湖地位。旗下四款产品：HBuilder、5+ Runtime、MUI、流应用都是弥补并扩展HTML5特性的产品。该公司的理念就是解决HTML5的性能、工具、能力三方面的问题。MUI是一款不错的前端框架，性能比 jQuery Mobile、Bootstrap好很多，主要区别：<br>设计思路不同，MUI坚持用原生JS做，不依赖jQuery或者Angularjs。<br>MUI调用了5+ Runtime的底层原生加速，比不带原生加速的框架更快。<br>但是，DCloud毕竟是个新平台，发展才2年，新产品内部存在的Bug还需要很多的测试。在其官方社区中，不少开发者也在呼吁DCloud尽快完善文档和框架。</p>
-<p>五 APICloud</p>
-<p>APICloud提供原生应用的功能模块（设备访问，界面布局，开放SDK等），开发者可以通过JS调用。前端工程师负责页面布局，UI展现，及简单的交互，原生模块负责性能方面和功能实现，两者结合形成一个完整的应用。同时APICloud提供了云数据库的功能，前端不必了解PHP，Node.js等后端语言，通过JS接口或Restful API实现数据库的增删改查。<br>但是APICloud的更新速度很快，版本不太稳定。而且，它是为不懂APP开发的人士准备的，不适合科技公司和程序员。</p>
-<p></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/14/跨平台APP-对Cordova-APPCan-DCloud-APICloud四大平台的分析/" data-id="ciqvy3gma0004ddqvjhq3f1ns" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-10分钟搞定支付宝和微信支付的各种填坑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/" class="article-date">
-  <time datetime="2016-02-23T11:50:18.000Z" itemprop="datePublished">2016-02-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/">10分钟搞定支付宝和微信支付的各种填坑</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>支付宝填坑是每个接入支付宝必经之路，下面是我接入支付宝遇到的问题汇总，希望大家在接入的路上少一点弯路。  网址  <a href="http://www.cocoachina.com/ios/20160527/16480.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20160527/16480.html</a></span></p>
-<p>问题1. Util/base64.h:63:21: Cannot find interface declaration for ‘NSObject’, superclass of ‘Base64’</p>
-<p>解决办法：</p>
-<p>这是base64.h中没有加入#import 系统库文件导致，这个错误报错方法直接想喷它一脸。报错方式太恶心。</p>
-<p>问题2.截图告知你什么问题</p>
-<p>616981-d6540c725f3801a4.jpg</p>
-<p>解决办法：</p>
-<p>这个问题可以同上的，心情好，截图再次说明下，在 openssl_wrapper.h中#import 库即可</p>
-<p>问题3.Util/openssl_wrapper.m:11:9: ‘rsa.h’ file not found</p>
-<p>解决办法：</p>
-<p>（1）万年老坑，只要你接入支付宝百分百要遇到的问题，所以习以为常吧</p>
-<p>（2）在Build setting中搜索search，找到Header Search Paths，添加$(PROJECT_DIR)/openssl和$(PROJECT_DIR) 如下图：</p>
-<p>（3）重要问题说三遍，这是网络找到的到答案后继续有同样的坑，自己的解决方案,</p>
-<p>Header Search Paths $(PROJECT_DIR)/ali中输入这个</p>
-<p>Framework Search Paths 和 Library Search Paths 继续是$(inherited) 和 $(PROJECT_DIR)/ali</p>
-<p>‘rsa.h’ file not found的解决方案</p>
-<p>（4）由于后期多项目的接入，让我知道一个算是万能方法吧，就是始终保持Header Search Paths 和 Library Search Paths 都能找到你导入的openssl的正确路径即可，已尝试多遍，是能解决以上问题（求黑）</p>
-<p>616981-b71f879b0c85fb6a.jpg</p>
-<p>616981-e833ce4b6bd3cb57.jpg</p>
-<p>问题4. 这类错很多，大概有这些：这些可能是库文件没有导入，导致的</p>
-<p>“_CNCopyCurrentNetworkInfo”, referenced from:</p>
-<p>Undefined symbols for architecture x86_64:</p>
-<p>“CNCopyCurrentNetworkInfo”, referenced from:</p>
-<p>-[APayReachability wifiInterface] in AlipaySDK</p>
-<p>+[internal_DeviceInfo getSSIDInfo] in AlipaySDK</p>
-<p>+[internal_DeviceInfo getNetworkInfo] in AlipaySDK</p>
-<p>“_CNCopySupportedInterfaces”, referenced from:</p>
-<p>-[APayReachability wifiInterface] in AlipaySDK</p>
-<p>+[internal_DeviceInfo getSSIDInfo] in AlipaySDK</p>
-<p>+[internal_DeviceInfo getNetworkInfo] in AlipaySDK</p>
-<p>“_CTRadioAccessTechnologyCDMA1x”, referenced from:</p>
-<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
-<p>“_CTRadioAccessTechnologyEdge”, referenced from:</p>
-<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
-<p>“_CTRadioAccessTechnologyGPRS”, referenced from:</p>
-<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
-<p>“_CTRadioAccessTechnologyLTE”, referenced from:</p>
-<p>-[AliSecXReachability networkStatusForFlags:] in AlipaySDK</p>
-<p>“_OBJC_CLASS$_CMMotionManager”, referenced from:</p>
-<p>objc-class-ref in AlipaySDK</p>
-<p>“OBJC_CLASS$_CTTelephonyNetworkInfo”, referenced from:</p>
-<p>objc-class-ref in AlipaySDK</p>
-<p>“SCNetworkReachabilityCreateWithAddress”, referenced from:</p>
-<p>+[APayReachability reachabilityWithAddress:] in AlipaySDK</p>
-<p>+[AliSecXReachability reachabilityWithAddress:] in AlipaySDK</p>
-<p>“_SCNetworkReachabilityCreateWithName”, referenced from:</p>
-<p>+[APayReachability reachabilityWithHostname:] in AlipaySDK</p>
-<p>+[AliSecXReachability reachabilityWithHostName:] in AlipaySDK</p>
-<p>“_SCNetworkReachabilityGetFlags”, referenced from:</p>
-<p>-[APayReachability isReachable] in AlipaySDK</p>
-<p>-[APayReachability isReachableViaWWAN] in AlipaySDK</p>
-<p>-[APayReachability isReachableViaWiFi] in AlipaySDK</p>
-<p>-[APayReachability connectionRequired] in AlipaySDK</p>
-<p>-[APayReachability isConnectionOnDemand] in AlipaySDK</p>
-<p>-[APayReachability isInterventionRequired] in AlipaySDK</p>
-<p>-[APayReachability reachabilityFlags] in AlipaySDK</p>
-<p>…</p>
-<p>“_SCNetworkReachabilityScheduleWithRunLoop”, referenced from:</p>
-<p>-[AliSecXReachability startNotifier] in AlipaySDK</p>
-<p>“_SCNetworkReachabilitySetCallback”, referenced from:</p>
-<p>-[APayReachability startNotifier] in AlipaySDK</p>
-<p>-[APayReachability stopNotifier] in AlipaySDK</p>
-<p>-[AliSecXReachability startNotifier] in AlipaySDK</p>
-<p>“_SCNetworkReachabilitySetDispatchQueue”, referenced from:</p>
-<p>-[APayReachability startNotifier] in AlipaySDK</p>
-<p>-[APayReachability stopNotifier] in AlipaySDK</p>
-<p>“_SCNetworkReachabilityUnscheduleFromRunLoop”, referenced from:</p>
-<p>-[AliSecXReachability stopNotifier] in AlipaySDK</p>
-<p>“std::1::basic_string, std::1::allocator &gt;::init(char const, unsigned long)”, referenced from:</p>
-<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
-<p>“std::1::basic_string, std::1::allocator &gt;::reserve(unsigned long)”, referenced from:</p>
-<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
-<p>“std::1::basic_string, std::__1::allocator &gt;::~basic_string()”, referenced from:</p>
-<p>CAliSecXURL::encodeURIComponent(CAliSecXBuffer&amp;) in AlipaySDK</p>
-<p>“std::nothrow”, referenced from:</p>
-<p>CAliSecXBuffer::CAliSecXBuffer(unsigned long) in AlipaySDK</p>
-<p>CAliSecXBuffer::_copy(unsigned char const, unsigned long) in AlipaySDK</p>
-<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
-<p>“std::terminate()”, referenced from:</p>
-<p>clang_call_terminate in AlipaySDK</p>
-<p>“operator delete”, referenced from:</p>
-<p>CAliSecXBuffer::~CAliSecXBuffer() in AlipaySDK</p>
-<p>CAliSecXBuffer::release() in AlipaySDK</p>
-<p>CAliSecXBuffer::~CAliSecXBuffer() in AlipaySDK</p>
-<p>CAliSecXBuffer::operator=(CAliSecXBuffer const&amp;) in AlipaySDK</p>
-<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
-<p>alisec_crypto_Hex2Bin(CAliSecXBuffer const&amp;) in AlipaySDK</p>
-<p>alisec_crypto_Bin2Hex(CAliSecXBuffer const&amp;) in AlipaySDK</p>
-<p>…</p>
-<p>“operator new”, referenced from:</p>
-<p>CAliSecXBuffer::CAliSecXBuffer(unsigned long) in AlipaySDK</p>
-<p>CAliSecXBuffer::_copy(unsigned char const*, unsigned long) in AlipaySDK</p>
-<p>CAliSecXBuffer::resize(unsigned long) in AlipaySDK</p>
-<p>“cxa_begin_catch”, referenced from:</p>
-<p>clang_call_terminate in AlipaySDK</p>
-<p>“gxx_personality_v0”, referenced from:</p>
-<p>+[ASSStorageAccesser saveStorageModel:] in AlipaySDK</p>
-<p>+[ASSStorageAccesser loadStorageModelFromKeychain] in AlipaySDK</p>
-<p>+[ASSStorageAccesser loadPreviousApdid] in AlipaySDK</p>
-<p>+[ASSStorageAccesser getRandomizedID] in AlipaySDK</p>
-<p>+[ASSStorageAccesser getNewRadomizedID] in AlipaySDK</p>
-<p>+[ASSStorageAccesser loadLastLoginTime] in AlipaySDK</p>
-<p>+[ASSStorageAccesser saveCurrentLoginTime:] in AlipaySDK</p>
-<p>…</p>
-<p>“_deflate”, referenced from:</p>
-<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
-<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
-<p>“_deflateEnd”, referenced from:</p>
-<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
-<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
-<p>“_deflateInit2”, referenced from:</p>
-<p>+[ASSCommonUtils gzipData:] in AlipaySDK</p>
-<p>+[DTGZipUtil compressGZip:] in AlipaySDK</p>
-<p>“_kCNNetworkInfoKeyBSSID”, referenced from:</p>
-<p>+[UIDevice(APEX) networkDic] in AlipaySDK</p>
-<p>“_kCNNetworkInfoKeySSID”, referenced from:</p>
-<p>+[UIDevice(APEX) networkDic] in AlipaySDK</p>
-<p>ld: symbol(s) not found for architecture x86_64</p>
-<p>clang: error: linker command failed with exit code 1 (use -v to see invocation)</p>
-<p>解决办法：</p>
-<p>这种问题通过在General-&gt;Link Framework and Libraiies中添加以下framework解决：</p>
-<ul>
-<li><p>libz.tbd</p>
-</li>
-<li><p>libc++.tbd</p>
-</li>
-<li><p>Security.framework</p>
-</li>
-<li><p>CoreMotion.Framework</p>
-</li>
-<li><p>CFNetwork.framework</p>
-</li>
-<li><p>CoreTelephony.framework</p>
-</li>
-<li><p>SystemConfiguration.framework</p>
-</li>
-</ul>
-<p>截图如下，由于公司同时接入支付宝和微信支付，所以导入的库就多了点咯：</p>
-<p>616981-2e9fde123b91a6d5.jpg</p>
-<p>问题5. Redefinition of ‘RSA’ as different kind of symbol 多为sdk集成时产生的坑，因为我们公司在集成支付宝之前，有用过RSA加密，导致重名问题</p>
-<p>解决办法：</p>
-<p>（1）这个问题不是每个公司都可能遇到的，但遇到也心烦</p>
-<p>（2）由于支付宝中的openssl中的rsa.h文件与RSA加密有重名冲突。改掉公司自己之前导入RSA的命名，如果你牛逼也可以去改rsa.h中的</p>
-<p>问题6. 系统库导入问题</p>
-<p>+++++++++++++</p>
-<p>symbol(s) not found for architecture arm64</p>
-<p>1464167743266924.png</p>
-<p>解决办法：</p>
-<p>就是导入系统库了</p>
-<p>616981-3a750ed6a81bdc43.jpg</p>
-<p>问题7：终于到微信了，接入微信，你就开心了</p>
-<p>因为问题太少了，只能感谢下这两个帖子的楼主了</p>
-<p>解决办法：</p>
-<p>使用微信支付SDK1.5版本的支付demo</p>
-<p>微信支付如果遇到跳转只有一个确定请看这里</p>
-<p>为了一些懒人懒的去看帖子，简单说，就是微信支付注册放在友盟分享之后就ok了！</p>
-<p>代码示例：</p>
-<p>1<br>2<br>3<br>4<br>// 友盟分享<br>[self configUmengShare];<br>//向微信注册<br>[WXApi registerApp:@”wxb4ba3c02aa476ea1” withDescription:@”demo 2.0”];<br>问题7：拉起支付宝报错：交易订单处理失败,请稍后再试(ALI64)</p>
-<p>解决办法：</p>
-<p>重新生成私钥和公钥，执行步骤如下个问题</p>
-<p>问题8：支付宝要重新生成私钥和公钥，并上传修改公钥 – 为你补充</p>
-<p>解决办法：</p>
-<p>RSA密钥生成命令步骤如下：</p>
-<p>(1)先在终端键入 openssl</p>
-<p>生成RSA私钥</p>
-<p>(2)openssl&gt;genrsa -out rsa_private_key.pem 1024</p>
-<p>生成RSA公钥</p>
-<p>(3)openssl&gt;rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem</p>
-<p>将RSA私钥转换成PKCS8格式</p>
-<p>(4)openssl&gt;pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt</p>
-<p>注意：“&gt;”符号后面的才是需要输入的命令。</p>
-<p>使用</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>WuTiandeiMac:FPHClientNew wutianshi$ openssl<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt; genrsa -out rsa_private_key.pem 1024<br>Generating RSA private key, 1024 bit long modulus<br>………………..++++++<br>………++++++<br>e is 65537 (0x10001)<br>OpenSSL&gt; rsa -in rsa_private_key.pem -pubout -out rsa_public_key.pem<br>writing RSA key<br>OpenSSL&gt;<br>OpenSSL&gt;<br>OpenSSL&gt; pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt<br>—–BEGIN PRIVATE KEY—–<br>MIICdgIBADANBgkqhkiG9w0BAQEFAASCAmAwggJcAgEAAoGBANOjnFDIjeQjyah1<br>1smthHNsiHyXE8EOWMyMZkLrIlbu6TCDVHk/hhJTpbDxVOz6f4cFdynP/wD9Tbnf<br>ZfJCKFDFJ9jPz3Euyb5/jLFbyAVblyLLPiv5bxRLaA9/w4Jtt+G7E/ti8HN6224x<br>4TT3owFuKqZTcAXeqXp7QMzZyEkZAgMBAAECgYBWYKRf5DrlLiYT92Rek89HPLjI<br>APEzDiP3+CWUkltFl+Tcw/0qL18NA87QVO8QeXyrIvPrwNSXFssuXZtCMPY6oqgh<br>21ixQ+w4Kk4Z8nkEbFNRjryrpOeGMQmZlkSqRiehnYPY6UT8ovKXj0D1HBoscfA7<br>z1Ioxpo3QEN3jsxkcQJBAPbgYhJYS7+/HB92eXaHckTpU0/ycosSj6ha02xs5+Sv<br>xJbkkDfrt/LVVgApBYlgJQG0WRcD/8+4cIyyAxGFp7MCQQDbdduyrvUTffsXeuad<br>XcHIAmX928y19YGvCU3+TJtGIfUMPoRsnidMnZh2s29G6bGy0fkrmMadogEkKqQX<br>AmYDAkBEmbdGx7hM0Oscpww7bonHMlrPNVy03nSC4LItR9nsRxdGor6ce2jDFpru<br>MnfyY4AFCDtVVOwpqWPFBNYrcUtXAkEAltAme2OKHawMmnUl9+zPV1B2oH6k7kJZ<br>rVy6kVA5wHdje9eWj0IcBaWjeacTiGreZ+Gt1sz1aKxFFoKLIxjN2wJADlpg/9iN<br>Bf+JylK9QEgOTw6PngSOiXeaVXdErOPbu4WkzvxhB0bm8HPEPiJpLg/3sNaaX3ou<br>TIEHO8o1EcEnrw==<br>—–END PRIVATE KEY—–<br>OpenSSL&gt;<br>生成的文件：</p>
-<p>616981-bf1bd390c88ef9da.png</p>
-<p>把公钥上传到支付宝，然后把pkcs8 -topk8 -inform PEM -in rsa_private_key.pem -outform PEM -nocrypt 这条命令产生的私钥用在下面设置中就好</p>
-<p>然后设置</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>/<em>
-</em>商户的唯一的parnter和seller。<br><em>签约后，支付宝会为每个商户分配一个唯一的 parnter 和 seller。
-</em>/<br>/<em>============================================================================</em>/<br>/<em>=======================需要填写商户app申请的===================================</em>/<br>/<em>============================================================================</em>/<br>NSString <em>partner = PartnerID;//合作伙伴身份（PID）:<br>NSString </em>seller = SellerID;//商户支付宝账户<br>//获取私钥并将商户信息签名,外部商户可以根据情况存放私钥和签名,只需要遵循RSA签名规范,并将签名字符串base64编码和UrlEncode<br>NSString *privateKey = PartnerPrivKey;// 刚第三端命令生成的去头去尾<br>如有问题，继续分享咯，总结才能让问题越来越少！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/" data-id="ciqvy3gm30002ddqv5qhonjdi" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="[转]-iOS中文版三方库资源库" class="article article-type-[转]" itemscope itemprop="blogPost">
+        <section id="main"><article id="[转]-iOS中文版三方库资源库" class="article article-type-[转]" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/02/21/iOS中文版三方库资源库/" class="article-date">
   <time datetime="2016-02-21T06:34:19.000Z" itemprop="datePublished">2016-02-21</time>
@@ -345,8 +92,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/02/21/iOS中文版三方库资源库/">iOS中文版三方库资源库</a>
+    <h1 class="article-title" itemprop="name">
+      iOS中文版三方库资源库
     </h1>
   
 
@@ -1086,327 +833,28 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="10分钟-搞定JS和iOS的交互" class="article article-type-10分钟" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/15/搞定JS和iOS的交互/" class="article-date">
-  <time datetime="2015-11-15T11:57:57.000Z" itemprop="datePublished">2015-11-15</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2016/02/23/10分钟搞定支付宝和微信支付的各种填坑/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/15/搞定JS和iOS的交互/">搞定JS和iOS的交互</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>S和iOS的交互</span></p>
-<p>JS和iOS交互，是每个应用都少不了的需求，尤其是在页面变动比较大的情况，页面经常更新，JS和iOS交互用起来就很幸福了。</p>
-<p>进入正题</p>
-<p>一、贴上h5的代码</p>
-<p><html></html></p>
-<p><head></head></p>
-<p><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"></p>
-<script type="text/javascript">
-
-<p>var share = JSON.stringify({“title”: “Migi000”,<br>“desc”: “简书”,<br>“shareUrl”: “<a href="http://www.jianshu.com/p/f896d73c670a">http://www.jianshu.com/p/f896d73c670a</a>“<br>});</p>
-<p>//IOS<br>function startFunction(share){<br>window.android.startFunction(share)//android<br>}</p>
-<p></script><br><p></p>
-<p><body><br><br></body></p>
-<p></p><h1>Objective-C和JavaScript交互的那些事</h1> <br><p></p>
-<p><input type="button" value="Share" onclick="startFunction(share)">点击调用原生代码并传递参数</p>
-<p><br>注释：这里的方法要写在head里面，PS:在测试这段代码之前，本身方法是写在body中，但是Android不能实现，后来放在head中就可以实现，这个没有太多了解是什么原因，有大神可以指教</p>
-<p>二、快速接入 - block解决<br>.m文件如下</p>
-<p>////  ViewController.m//  jsTest////  Created by fangpinhui on 16/5/18.//  Copyright © 2016年 Lumic. All rights reserved.//</p>
-<p>#import “ViewController.h”#import <javascriptcore javascriptcore.h=""></javascriptcore></p>
-<p>@interface ViewController ()<uiwebviewdelegate>@property (nonatomic)UIWebView <em>webView;<br>@property (nonatomic)JSContext </em>jsContext;<br>@property (nonnull,strong) UIButton *btn;<br>@end</uiwebviewdelegate></p>
-<p>@implementation ViewController</p>
-<ul>
-<li>(void)viewDidLoad {<br>[super viewDidLoad];</li>
-</ul>
-<p>self.webView = [[UIWebView alloc]initWithFrame:self.view.bounds];<br>self.webView.delegate = self;<br>[self.view addSubview:_webView];<br>NSString *str = [[NSBundle mainBundle] pathForResource:@”migi” ofType:@”html”];<br>[self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:@”f”]]];<br>//    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:@”<a href="http://192.168.1.59:8020/Online-Booking/index.html" target="_blank" rel="external">http://192.168.1.59:8020/Online-Booking/index.html</a>“]]];</p>
-<p>//  在上面添加一个按钮，实现oc端控制h5实现弹alert方法框<br>self.btn = [[UIButton alloc] initWithFrame:CGRectMake(100, 400, 100, 40)];<br>self.btn.backgroundColor = [UIColor redColor];<br>[self.btn addTarget:self action:@selector(showAlert) forControlEvents:UIControlEventTouchUpInside];<br>[self.view addSubview:self.btn];</p>
-<p>}</p>
-<ul>
-<li><p>(void)showAlert<br>{<br>//要将script的alert()方法转化为string类型<br>NSString *alertJs=@”alert(‘Hello Word’)”;<br>[_jsContext evaluateScript:alertJs];<br>}</p>
-</li>
-<li><p>(void)webViewDidFinishLoad:(UIWebView <em>)webView{<br>_jsContext = [webView valueForKeyPath:@”documentView.webView.mainFrame.javaScriptContext”];<br>_jsContext[@”startFunction”] =^(id obj){<br>////这里通过block回调从而获得h5传来的json数据<br>/</em>block中捕获JSContexts<br>我们知道block会默认强引用它所捕获的对象，如下代码所示，如果block中直接使用context也会造成循环引用，这使用我们最好采用[JSContext currentContext]来获取当前的JSContext:<br><em>/<br>[JSContext currentContext];<br>NSData </em>data = [(NSString <em>)obj dataUsingEncoding:NSUTF8StringEncoding ];<br>NSDictionary </em>dict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];<br>NSLog(@” data   %@   ======  ShareUrl %@”,obj,dict[@”shareUrl”]);<br>};<br>//<br>_jsContext.exceptionHandler = ^(JSContext <em>context, JSValue </em>exceptionValue) {<br>context.exception = exceptionValue;<br>//比如把js中的方法名改掉，OC找不到相应方法，这里就会打印异常信息<br>NSLog(@”异常信息：%@”, exceptionValue);<br>};</p>
-</li>
-</ul>
-<p>}</p>
-<ul>
-<li>(void)didReceiveMemoryWarning {<br>[super didReceiveMemoryWarning];<br>// Dispose of any resources that can be recreated.<br>}</li>
-</ul>
-<p>@end<br>注释：<br>1.#import <javascriptcore javascriptcore.h=""> 导入放在.h文件中<br>2.因为这里h5需要调用我们的Native定义的startFunction 方法，以及需要的回调的数据格式，所以这里需要和h5沟通一下</javascriptcore></p>
-<p>这就是简单的js和oc之间的交互，可以使用在平台的应用中，下面是遇到的问题汇总，如有遇到问题，积极分享咯！</p>
-<p>问题汇总：<br>问题1.<br>在执行回调时，iOS可以实现回调方法，而Android无法实现，双发都检查了代码，没有问题，检查h5代码时，发现方法写在body中，Android无法实现回调</p>
-<p>解决办法：<br>h5的方法写在head中，实现了，好吧，大神指导好吗？</p>
-<p>问题2：<br>在进行js和iOS的交互时，我写了个代码，demo中我把#import <javascriptcore javascriptcore.h=""><br>库的引入放在了.m文件中，block回调时拿到了数据，但是当在公司项目中实现时，怎么都不执行回调方法，很是诡异，怎么都无法实现，</javascriptcore></p>
-<p>解决办法：<br>把库的导入#import <javascriptcore javascriptcore.h=""> 放在.h文件中就执行了。满面懵逼！，求指教</javascriptcore></p>
-<p>来自：<a href="http://www.jianshu.com/p/0819c84f9ef1" target="_blank" rel="external">http://www.jianshu.com/p/0819c84f9ef1</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/15/搞定JS和iOS的交互/" data-id="ciqvy3gm70003ddqvhkawqk6m" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-菜鸟成神宝典" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/11/13/菜鸟成神宝典/" class="article-date">
-  <time datetime="2015-11-13T12:18:37.000Z" itemprop="datePublished">2015-11-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+          10分钟搞定支付宝和微信支付的各种填坑
         
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/13/菜鸟成神宝典/">菜鸟成神宝典</a>
-    </h1>
   
+    <a href="/2015/11/15/搞定JS和iOS的交互/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">搞定JS和iOS的交互</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>其实移动开发开发发展那么多年，无数的前人已经趟过无数的坑，其实菜鸟依旧可以成神，取决于你付出的努力程度，如果你好好静下来看完下面的每一篇文章，并且有一定见解，那么在iOS方面你至少一名中高级的程序员，月薪一定不会低于18K。</span></p>
-<p>菜鸟成神必杀技之一：Runtime 各种有用资料的整理，必读精品<br>宇哥推荐你们把这部分读懂，读通，重新定义你的OC世界观</p>
-<p>这是南峰子版，笔者读过，很不错</p>
-<p>（一）类与对象 <a href="http://blog.jobbole.com/79566/" target="_blank" rel="external">http://blog.jobbole.com/79566/</a><br>（二）成员变量和属性 <a href="http://blog.jobbole.com/79570/" target="_blank" rel="external">http://blog.jobbole.com/79570/</a><br>（三）消息和方法 <a href="http://blog.jobbole.com/79574/" target="_blank" rel="external">http://blog.jobbole.com/79574/</a><br>（四）Method Swizzling <a href="http://blog.jobbole.com/79580/" target="_blank" rel="external">http://blog.jobbole.com/79580/</a><br>（五）协议与分类 <a href="http://blog.jobbole.com/79583/" target="_blank" rel="external">http://blog.jobbole.com/79583/</a><br>（六）补充 <a href="http://blog.jobbole.com/79588/" target="_blank" rel="external">http://blog.jobbole.com/79588/</a><br>当你读完南峰子的，可以看看这个</p>
-<p><a href="http://www.jianshu.com/p/e071206103a4" target="_blank" rel="external">http://www.jianshu.com/p/e071206103a4</a><br>深入研究Runtime,当你读完上面的内容，在读以下内容就差不多进入了一个新的境界了</p>
-<p><a href="http://www.jianshu.com/users/cb974750735c/latest_articles" target="_blank" rel="external">http://www.jianshu.com/users/cb974750735c/latest_articles</a><br>全方位runtime装逼指南</p>
-<p><a href="http://ios.jobbole.com/85092/" target="_blank" rel="external">http://ios.jobbole.com/85092/</a><br>菜鸟成神必杀技之二：内存管理深度剖析，知其然，知其所以然</p>
-<p>内存管理教程和原理剖析（一）<a href="http://blog.jobbole.com/66197/" target="_blank" rel="external">http://blog.jobbole.com/66197/</a><br>内存管理教程和原理剖析（二）<a href="http://blog.jobbole.com/66363/" target="_blank" rel="external">http://blog.jobbole.com/66363/</a><br>内存管理教程和原理剖析（三）<a href="http://blog.jobbole.com/66369/" target="_blank" rel="external">http://blog.jobbole.com/66369/</a><br>内存管理教程和原理剖析（四）<a href="http://blog.jobbole.com/66372/" target="_blank" rel="external">http://blog.jobbole.com/66372/</a><br>深浅拷贝 <a href="http://ios.jobbole.com/84859/" target="_blank" rel="external">http://ios.jobbole.com/84859/</a><br>菜鸟成神必杀技之三：多线程，这一块一定要深入理解，因为面试官，尤其是技术总监级别的不一定懂iOS，但是一定懂内存管理和多线程</p>
-<p>IOS开发之多线程技术 <a href="http://www.open-open.com/lib/view/open1454495256105.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1454495256105.html</a><br>多线程总结 ： <a href="http://www.open-open.com/lib/view/open1439907700676.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1439907700676.html</a><br>多线程详解 ： <a href="http://www.open-open.com/lib/view/open1454028502198.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1454028502198.html</a><br>必看 <a href="http://ios.jobbole.com/85040/" target="_blank" rel="external">http://ios.jobbole.com/85040/</a><br>10分钟 搞定JS和iOS的交互</p>
-<p>你必须先看这篇文章： <a href="http://www.open-open.com/lib/view/open1419305655562.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1419305655562.html</a><br><a href="http://blog.csdn.net/lizhongfu2013/article/details/9232129" target="_blank" rel="external">http://blog.csdn.net/lizhongfu2013/article/details/9232129</a><br><a href="http://blog.csdn.net/lizhongfu2013/article/details/9236357" target="_blank" rel="external">http://blog.csdn.net/lizhongfu2013/article/details/9236357</a><br>干货好文章 <a href="http://www.jianshu.com/p/a329cd4a67ee" target="_blank" rel="external">http://www.jianshu.com/p/a329cd4a67ee</a><br>干货好文章 <a href="http://ios.jobbole.com/84491/" target="_blank" rel="external">http://ios.jobbole.com/84491/</a><br>交互范例 ：<a href="http://www.open-open.com/lib/view/open1463553967635.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1463553967635.html</a><br><a href="http://www.open-open.com/lib/view/open1456311816823.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1456311816823.html</a><br>ios 视频录制的三种方式</p>
-<p><a href="http://ios.jobbole.com/85069/" target="_blank" rel="external">http://ios.jobbole.com/85069/</a><br>直播相关内容</p>
-<p><a href="https://mp.weixin.qq.com/s?__biz=MzA4MjI0NjczNQ==&amp;mid=2652365086&amp;idx=1&amp;sn=e5ab2d6a641102ec9e2b5c175678a797&amp;scene=1&amp;srcid=05223KqAHcjMGjh83QqLXOVc&amp;key=f5c31ae61525f82e0b29fa654e701eb5165093fa979d25fc601a34874dce01f520a124dfdd113d992d0e3e86eeba9e74&amp;ascene=0&amp;uin=MTk5NDM1NQ%3D%3D&amp;devicetype=iMac+MacBookPro11%2C5+OSX+OSX+10.11.4+build(15E65)&amp;version=11020201&amp;pass_ticket=2vSvVDILehoRZdj1MGS0qpcfIh%2FXnQ0HhKl3H3arUtQ%3D" target="_blank" rel="external">https://mp.weixin.qq.com/s?__biz=MzA4MjI0NjczNQ==&amp;mid=2652365086&amp;idx=1&amp;sn=e5ab2d6a641102ec9e2b5c175678a797&amp;scene=1&amp;srcid=05223KqAHcjMGjh83QqLXOVc&amp;key=f5c31ae61525f82e0b29fa654e701eb5165093fa979d25fc601a34874dce01f520a124dfdd113d992d0e3e86eeba9e74&amp;ascene=0&amp;uin=MTk5NDM1NQ%3D%3D&amp;devicetype=iMac+MacBookPro11%2C5+OSX+OSX+10.11.4+build(15E65)&amp;version=11020201&amp;pass_ticket=2vSvVDILehoRZdj1MGS0qpcfIh%2FXnQ0HhKl3H3arUtQ%3D</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzA4MjI0NjczNQ==&amp;mid=2652365088&amp;idx=2&amp;sn=86e62f2ab415df27c5bba3ba171cdd54&amp;scene=1&amp;srcid=0522CBTRcjmmWfV4s8o68w4w&amp;key=f5c31ae61525f82e3f37b74d7b115678e9ed2553afb3551ea0f3dc8f920e72a918db4844d4530d8c00608ca91a21700a&amp;ascene=0&amp;uin=MTk5NDM1NQ%3D%3D&amp;devicetype=iMac+MacBookPro11%2C5+OSX+OSX+10.11.4+build(15E65)&amp;version=11020201&amp;pass_ticket=2vSvVDILehoRZdj1MGS0qpcfIh%2FXnQ0HhKl3H3arUtQ%3D" target="_blank" rel="external">https://mp.weixin.qq.com/s?__biz=MzA4MjI0NjczNQ==&amp;mid=2652365088&amp;idx=2&amp;sn=86e62f2ab415df27c5bba3ba171cdd54&amp;scene=1&amp;srcid=0522CBTRcjmmWfV4s8o68w4w&amp;key=f5c31ae61525f82e3f37b74d7b115678e9ed2553afb3551ea0f3dc8f920e72a918db4844d4530d8c00608ca91a21700a&amp;ascene=0&amp;uin=MTk5NDM1NQ%3D%3D&amp;devicetype=iMac+MacBookPro11%2C5+OSX+OSX+10.11.4+build(15E65)&amp;version=11020201&amp;pass_ticket=2vSvVDILehoRZdj1MGS0qpcfIh%2FXnQ0HhKl3H3arUtQ%3D</a></p>
-<p>那些著名或非著名的iOS面试题</p>
-<p>（上）<a href="http://www.open-open.com/lib/view/open1460681498043.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1460681498043.html</a><br>（中）<a href="http://www.open-open.com/lib/view/open1460681420544.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1460681420544.html</a><br>（下）<a href="http://www.open-open.com/lib/view/open1460682694966.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1460682694966.html</a><br><a href="http://ios.jobbole.com/84919/" target="_blank" rel="external">http://ios.jobbole.com/84919/</a><br>一个靠谱工程师必须会的面试题：<br>必看精品<br><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8A%EF%BC%89.md" target="_blank" rel="external">https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8A%EF%BC%89.md</a><br>必看精品<br><a href="https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8B%EF%BC%89.md" target="_blank" rel="external">https://github.com/ChenYilong/iOSInterviewQuestions/blob/master/01%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88/%E3%80%8A%E6%8B%9B%E8%81%98%E4%B8%80%E4%B8%AA%E9%9D%A0%E8%B0%B1%E7%9A%84iOS%E3%80%8B%E9%9D%A2%E8%AF%95%E9%A2%98%E5%8F%82%E8%80%83%E7%AD%94%E6%A1%88%EF%BC%88%E4%B8%8B%EF%BC%89.md</a><br>必看精品<br><a href="http://www.open-open.com/lib/view/open1382923236124.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1382923236124.html</a><br>必看精品（从简单到复杂的面试题）<br><a href="http://www.open-open.com/lib/view/open1440165855942.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1440165855942.html</a><br>优酷的面试题 ：<a href="http://www.open-open.com/lib/view/open1457952546563.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1457952546563.html</a><br>宝库的面试题 ： <a href="http://www.open-open.com/lib/view/open1456359620073.html" target="_blank" rel="external">http://www.open-open.com/lib/view/open1456359620073.html</a></p>
-<p></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/13/菜鸟成神宝典/" data-id="ciqvy3gn20006ddqv2d31p2wg" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-最新版SDWebImage的使用" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/23/最新版SDWebImage的使用/" class="article-date">
-  <time datetime="2015-06-23T02:49:41.000Z" itemprop="datePublished">2015-06-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/23/最新版SDWebImage的使用/">最新版SDWebImage的使用</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>我之前写过一篇博客，介绍缓存处理的三种方式，其中最难，最麻烦，最占内存资源的还是图片缓存，最近做的项目有大量的图片处理，还是采用了SDWebImage来处理，但是发现之前封装好的代码报错了。研究发现，是我用了新版的SDWebImage，好多方法都变了。</span></p>
-<p>现在把代码贴出来，供大家参考。尤其是新手，看完这篇博客，图片缓存so easy。最后有demo供大家下载，先学习。网址<a href="http://www.cocoachina.com/ios/20141212/10622.html" target="_blank" rel="external">http://www.cocoachina.com/ios/20141212/10622.html</a></p>
-<p>第一步，下载SDWebImage，导入工程。github托管地址<a href="https://github.com/rs/SDWebImage" target="_blank" rel="external">https://github.com/rs/SDWebImage</a></p>
-<p>第二步，在需要的地方导入头文件</p>
-<p>1</p>
-<p>#import “UIImageView+WebCache.h”<br>第三步，调用sd_setImageWithURL：方法缓存图片，注意，这就是新版本的新方法，旧方法是setImageWithURL:。下面将几个方法都介绍一下。</p>
-<ol>
-<li>sd_setImageWithURL：</li>
-</ol>
-<p>1<br>2<br>//图片缓存的基本代码，就是这么简单<br>[self.image1 sd_setImageWithURL:imagePath1];</p>
-<ol>
-<li>sd_setImageWithURL:  completed:</li>
-</ol>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>//用block 可以在图片加载完成之后做些事情<br>[self.image2 sd_setImageWithURL:imagePath2 completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, NSURL *imageURL) {</p>
-<p>NSLog(@”这里可以在图片加载完成之后做些事情”);</p>
-<p>}];</p>
-<ol>
-<li>sd_setImageWithURL:  placeholderImage:</li>
-</ol>
-<p>1<br>2<br>//给一张默认图片，先使用默认图片，当图片加载完成后再替换<br>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”]];</p>
-<ol>
-<li>sd_setImageWithURL:  placeholderImage:  completed:</li>
-</ol>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>//使用默认图片，而且用block 在完成后做一些事情<br>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”] completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, NSURL *imageURL) {</p>
-<p>NSLog(@”图片加载完成后做的事情”);</p>
-<p>}];</p>
-<ol>
-<li>sd_setImageWithURL:  placeholderImage:  options:</li>
-</ol>
-<p>1<br>2<br>3<br>//options 选择方式</p>
-<p>[self.image1 sd_setImageWithURL:imagePath1 placeholderImage:[UIImage imageNamed:@”default”] options:SDWebImageRetryFailed];<br>其他就不一一介绍了，oc是自文档语言，看方法名就知道干什么的了。除了带options选项的方法，其他的方法都是综合存储，也就是内存缓存和磁盘缓存结合的方式，如果你只需要内存缓存，那么在options这里选择SDWebImageCacheMemoryOnly就可以了。</p>
-<p>如果不想深入了解，到这里你已经可以用SDWebimage进行图片缓存了，接下来我要解释options的所有选项，以及SDWebImage内部执行流程。</p>
-<p>一、options所有选项：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>　　//失败后重试<br>SDWebImageRetryFailed = 1 &lt;&lt; 0,</p>
-<p>//UI交互期间开始下载，导致延迟下载比如UIScrollView减速。<br>SDWebImageLowPriority = 1 &lt;&lt; 1,</p>
-<p>//只进行内存缓存<br>SDWebImageCacheMemoryOnly = 1 &lt;&lt; 2,</p>
-<p>//这个标志可以渐进式下载,显示的图像是逐步在下载<br>SDWebImageProgressiveDownload = 1 &lt;&lt; 3,</p>
-<p>//刷新缓存<br>SDWebImageRefreshCached = 1 &lt;&lt; 4,</p>
-<p>//后台下载<br>SDWebImageContinueInBackground = 1 &lt;&lt; 5,</p>
-<p>//NSMutableURLRequest.HTTPShouldHandleCookies = YES;</p>
-<p>SDWebImageHandleCookies = 1 &lt;&lt; 6,</p>
-<p>//允许使用无效的SSL证书<br>//SDWebImageAllowInvalidSSLCertificates = 1 &lt;&lt; 7,</p>
-<p>//优先下载<br>SDWebImageHighPriority = 1 &lt;&lt; 8,</p>
-<p>//延迟占位符<br>SDWebImageDelayPlaceholder = 1 &lt;&lt; 9,</p>
-<p>//改变动画形象<br>SDWebImageTransformAnimatedImage = 1 &lt;&lt; 10,<br>二、SDWebImage内部实现过程</p>
-<p>入口 setImageWithURL:placeholderImage:options: 会先把 placeholderImage 显示，然后 SDWebImageManager 根据 URL 开始处理图片。<br>进入 SDWebImageManager-downloadWithURL:delegate:options:userInfo:，交给 SDImageCache 从缓存查找图片是否已经下载 queryDiskCacheForKey:delegate:userInfo:.<br>先从内存图片缓存查找是否有图片，如果内存中已经有图片缓存，SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo: 到 SDWebImageManager。<br>SDWebImageManagerDelegate 回调 webImageManager:didFinishWithImage: 到 UIImageView+WebCache 等前端展示图片。<br>如果内存缓存中没有，生成 NSInvocationOperation 添加到队列开始从硬盘查找图片是否已经缓存。<br>根据 URLKey 在硬盘缓存目录下尝试读取图片文件。这一步是在 NSOperation 进行的操作，所以回主线程进行结果回调 notifyDelegate:。<br>如果上一操作从硬盘读取到了图片，将图片添加到内存缓存中（如果空闲内存过小，会先清空内存缓存）。SDImageCacheDelegate 回调 imageCache:didFindImage:forKey:userInfo:。进而回调展示图片。<br>如果从硬盘缓存目录读取不到图片，说明所有缓存都不存在该图片，需要下载图片，回调 imageCache:didNotFindImageForKey:userInfo:。<br>共享或重新生成一个下载器 SDWebImageDownloader 开始下载图片。<br>图片下载由 NSURLConnection 来做，实现相关 delegate 来判断图片下载中、下载完成和下载失败。<br>connection:didReceiveData: 中利用 ImageIO 做了按图片下载进度加载效果。<br>connectionDidFinishLoading: 数据下载完成后交给 SDWebImageDecoder 做图片解码处理。<br>图片解码处理在一个 NSOperationQueue 完成，不会拖慢主线程 UI。如果有需要对下载的图片进行二次处理，最好也在这里完成，效率会好很多。<br>在主线程 notifyDelegateOnMainThreadWithInfo: 宣告解码完成，imageDecoder:didFinishDecodingImage:userInfo: 回调给 SDWebImageDownloader。<br>imageDownloader:didFinishWithImage: 回调给 SDWebImageManager 告知图片下载完成。<br>通知所有的 downloadDelegates 下载完成，回调给需要的地方展示图片。<br>将图片保存到 SDImageCache 中，内存缓存和硬盘缓存同时保存。写文件到硬盘也在以单独 NSInvocationOperation 完成，避免拖慢主线程。<br>SDImageCache 在初始化的时候会注册一些消息通知，在内存警告或退到后台的时候清理内存图片缓存，应用结束的时候清理过期图片。<br>SDWI 也提供了 UIButton+WebCache 和 MKAnnotationView+WebCache，方便使用。<br>SDWebImagePrefetcher 可以预先下载图片，方便后续使用。<br>从上面流程可以看出，当你调用setImageWithURL:方法的时候，他会自动去给你干这么多事，当你需要在某一具体时刻做事情的时候，你可以覆盖这些方法。比如在下载某个图片的过程中要响应一个事件，就覆盖这个方法：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>//覆盖方法，指哪打哪，这个方法是下载imagePath2的时候响应<br>SDWebImageManager *manager = [SDWebImageManager sharedManager];</p>
-<p>[manager downloadImageWithURL:imagePath2 options:SDWebImageRetryFailed progress:^(NSInteger receivedSize, NSInteger expectedSize) {</p>
-<p>NSLog(@”显示当前进度”);</p>
-<p>} completed:^(UIImage <em>image, NSError </em>error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {</p>
-<p>NSLog(@”下载完成”);<br>}];<br>对于初级来说，用sd_setImageWithURL:的若干个方法就可以实现很好的图片缓存。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/23/最新版SDWebImage的使用/" data-id="ciqvy3gmz0005ddqvkpl0jc66" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-iOS开发之理解iOS中的MVC设计模式" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/06/14/iOS开发之理解iOS中的MVC设计模式/" class="article-date">
-  <time datetime="2015-06-14T07:09:37.000Z" itemprop="datePublished">2015-06-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/14/iOS开发之理解iOS中的MVC设计模式/">iOS开发之理解iOS中的MVC设计模式</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>模型-视图-控制器（Model-View-Controller，MVC）是Xerox PARC在20世纪80年代为编程语言Smalltalk－80发明的一种软件设计模式，至今已广泛应用于用户交互应用程序中。在iOS开发中MVC的机制被使用的淋漓尽致，充分理解iOS的MVC模式，有助于我们程序的组织合理性。</span></p>
-<p>model_view_controller</p>
-<p>模型对象<br>模型对象封装了应用程序的数据，并定义操控和处理该数据的逻辑和运算。例如，模型对象可能是表示游戏中的角色或地址簿中的联系人。用户在视图层中所进行的创建或修改数据的操作，通过控制器对象传达出去，最终会创建或更新模型对象。模型对象更改时（例如通过网络连接接收到新数据），它通知控制器对象，控制器对象更新相应的视图对象。</p>
-<p>视图对象<br>视图对象是应用程序中用户可以看见的对象。视图对象知道如何将自己绘制出来，并可能对用户的操作作出响应。视图对象的主要目的，就是显示来自应用程序模型对象的数据，并使该数据可被编辑。尽管如此，在 MVC 应用程序中，视图对象通常与模型对象分离。</p>
-<p>在iOS应用程序开发中，所有的控件、窗口等都继承自 UIView，对应MVC中的V。UIView及其子类主要负责UI的实现，而UIView所产生的事件都可以采用委托的方式，交给UIViewController实现。</p>
-<p>控制器对象<br>在应用程序的一个或多个视图对象和一个或多个模型对象之间，控制器对象充当媒介。控制器对象因此是同步管道程序，通过它，视图对象了解模型对象的更改，反之亦然。控制器对象还可以为应用程序执行设置和协调任务，并管理其他对象的生命周期。</p>
-<p>控制器对象解释在视图对象中进行的用户操作，并将新的或更改过的数据传达给模型对象。模型对象更改时，一个控制器对象会将新的模型数据传达给视图对象，以便视图对象可以显示它。</p>
-<p>对于不同的UIView，有相应的UIViewController，对应MVC中的C。例如在iOS上常用的UITableView，它所对应的Controller就是UITableViewController。</p>
-<p>Model和View永远不能相互通信，只能通过Controller传递。<br>Controller可以直接与Model对话（读写调用Model），Model通过Notification和KVO机制与Controller间接通信。<br>Controller可以直接与View对话，通过outlet,直接操作View,outlet直接对应到View中的控件,View通过action向Controller报告事件的发生(如用户Touch我了)。Controller是View的直接数据源（数据很可能是Controller从Model中取得并经过加工了）。Controller是View的代理（delegate),以同步View与Controller。</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/06/14/iOS开发之理解iOS中的MVC设计模式/" data-id="ciqvy3gla0000ddqvpa4zxbd1" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hexo搭建方案（一）" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/04/13/hexo搭建方案（一）/" class="article-date">
-  <time datetime="2015-04-13T01:19:55.000Z" itemprop="datePublished">2015-04-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/04/13/hexo搭建方案（一）/">hexo搭建方案（一）</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><span>第一步<br>安装nvm（Node Version Manager），Terminal中运行</span></p>
-<p>1<br>$ curl <a href="https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh" target="_blank" rel="external">https://raw.githubusercontent.com/creationix/nvm/v0.7.0/install.sh</a> | sh<br>会提示：</p>
-<p>1<br>=&gt; Close and reopen your terminal to start using NVM<br>退出Terminal重启后nvm命令才能生效。假如update失败，可能没有profile文件，touch一下：</p>
-<p>1<br>2<br>touch ~/.bash_profile<br>touch ~/.profile<br>使用nvm安装node.js：</p>
-<p>1<br>nvm install 0.10<br>下完后安装hexo，这一步时间比较长：</p>
-<p>1<br>npm install -g hexo<br>然后找个文件初始化blog：</p>
-<p>1<br>2<br>3<br>cd ~/git/blog<br>hexo init .<br>ls<br>[update]更新hexo2版本后安装还需要执行：</p>
-<p>1<br>2<br>3<br>$ npm install hexo-renderer-ejs –save<br>$ npm install hexo-renderer-stylus –save<br>$ npm install hexo-renderer-marked –save<br>生成出的目录结构：</p>
-<p>1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>.<br>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── scripts<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes<br>新建一篇文章：</p>
-<p>hexo new mac下使用hexo搭建blog</p>
-<p>open source/_posts/mac下使用hexo搭建blog.md</p>
-<p>编辑md后生成html：</p>
-<p>$ hexo generate<br>本地预览：<br>$ hexo server<br>=&gt; [info] Hexo is running at localhost:4000/. Press Ctrl+C to stop.</p>
-<p>deploy<br>github上建个respository，设置里设一下<br>在_config.yml中：</p>
-<p>1<br>2<br>3<br>deploy:<br>type: github<br>repository: <a href="https://github.com/sunnyxx/blog-hexo.git" target="_blank" rel="external">https://github.com/sunnyxx/blog-hexo.git</a><br>然后执行：<br>$ hexo deploy</p>
-<p>就行了，github会多一个branch，比octopress简单</p>
-<p>参考文献：</p>
-<p>1<br>2<br>3<br>4<br><a href="http://opiece.me/2015/04/09/hexo-guide/" target="_blank" rel="external">http://opiece.me/2015/04/09/hexo-guide/</a><br><a href="http://www.jianshu.com/p/465830080ea9" target="_blank" rel="external">http://www.jianshu.com/p/465830080ea9</a><br><a href="http://www.jianshu.com/p/a2023a601ceb" target="_blank" rel="external">http://www.jianshu.com/p/a2023a601ceb</a><br><a href="https://hexo.io/zh-cn/" target="_blank" rel="external">https://hexo.io/zh-cn/</a><br></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/04/13/hexo搭建方案（一）/" data-id="ciqvy3glj0001ddqvp93nlzhd" class="article-share-link">Partager</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
